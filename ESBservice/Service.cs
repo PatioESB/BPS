@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
 using System.Text;
 using ESB_ConnectionPoints.PluginsInterfaces;
-using ESB;
-using System.Threading.Tasks;
 
 namespace ESBservice
 {
-  //  [ServiceBehavior(Namespace = "http://purchases.erpi.crystals.ru", Name = "Set10PurchasesService")]
+    //  [ServiceBehavior(Namespace = "http://purchases.erpi.crystals.ru", Name = "Set10PurchasesService")]
     public class set10Service : Set10Purchases
     {
          IServiceLocator _soapLocator = SOAPserver.end_addr;

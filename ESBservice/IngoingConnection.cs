@@ -73,7 +73,7 @@ namespace ESBservice
 
             if (string.IsNullOrEmpty(type))
             {
-                _logger.Info(string.Format("Не задан класс сообщения <{0}>", type));
+                _logger.Info(string.Format("Не задан type сообщения <{0}>", type));
             }
 
             _logger = serviceLocator.GetLogger(GetType());
@@ -91,7 +91,7 @@ namespace ESBservice
             handler = messageHandler;
             while (!ct.IsCancellationRequested)
             {
-                ct.WaitHandle.WaitOne(_readInterval);
+                continue;
             }
         }
 
