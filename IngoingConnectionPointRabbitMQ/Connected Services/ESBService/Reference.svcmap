@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0db7dc01-ff94-44c3-8f78-8c4997cdc587" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="E:\1с код\datareonWsdl.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="send.xsd" MetadataType="Schema" ID="f70fa412-dc5c-4580-85fc-256aafe2e0fe" SourceId="1" SourceUrl="http://sp-esb-adapter6:8091/adapters/kitExchange/send?xsd=xsd2" />
+    <MetadataFile FileName="send1.xsd" MetadataType="Schema" ID="a0a9a585-13f5-402a-befa-e9271c94d658" SourceId="1" SourceUrl="http://sp-esb-adapter6:8091/adapters/kitExchange/send?xsd=xsd1" />
+    <MetadataFile FileName="send2.xsd" MetadataType="Schema" ID="c3ef589f-a671-410d-80ff-d7c83c21389c" SourceId="1" SourceUrl="http://sp-esb-adapter6.patio-minsk.by:8091/adapters/kitExchange/send?xsd=xsd1" />
+    <MetadataFile FileName="send3.xsd" MetadataType="Schema" ID="af9b1db0-70ea-4202-9c21-7bbd111b940f" SourceId="1" SourceUrl="http://sp-esb-adapter6.patio-minsk.by:8091/adapters/kitExchange/send?xsd=xsd0" />
+    <MetadataFile FileName="send4.xsd" MetadataType="Schema" ID="3b085888-f661-4357-9606-7efed115f81d" SourceId="1" SourceUrl="http://sp-esb-adapter6.patio-minsk.by:8091/adapters/kitExchange/send?xsd=xsd2" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8f610141-691d-495b-98f6-0e4110d0829a" SourceId="1" SourceUrl="file:///E:/1с код/datareonWsdl.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

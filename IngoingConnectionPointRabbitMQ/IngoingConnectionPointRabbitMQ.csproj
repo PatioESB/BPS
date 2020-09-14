@@ -46,12 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ESBService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="IngoingConnectionPoint.cs" />
     <Compile Include="IngoingConnectionPointFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\ESBService\IngoingConnectionPointRabbitMQ.ESBService.Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ESBService\send.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ESBService\send1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ESBService\send2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ESBService\send3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ESBService\send4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ESBService\service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ESBService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ESBService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ESBService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ESBService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

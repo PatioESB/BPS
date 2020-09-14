@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://esb.axelot.ru" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sp-esb-adapter6:8091/adapters/kitExchange/send?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://sp-esb-adapter6:8091/adapters/kitExchange/send?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="SendMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://esb.axelot.ru" minOccurs="0" name="message" nillable="true" type="q1:Message" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClassId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CreationTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="NeedAcknowledgment" type="xs:boolean" />
+      <xs:element xmlns:q2="http://esb.axelot.ru" minOccurs="0" name="Properties" nillable="true" type="q2:ArrayOfMessageProperty">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q3="http://esb.axelot.ru" minOccurs="0" name="Receivers" nillable="true" type="q3:Receivers">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReplyTo" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q4="http://esb.axelot.ru" name="Message" nillable="true" type="q4:Message" />
+  <xs:complexType name="ArrayOfMessageProperty">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://esb.axelot.ru" minOccurs="0" maxOccurs="unbounded" name="MessageProperty" nillable="true" type="q5:MessageProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q6="http://esb.axelot.ru" name="ArrayOfMessageProperty" nillable="true" type="q6:ArrayOfMessageProperty" />
+  <xs:complexType name="MessageProperty">
+    <xs:sequence>
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://esb.axelot.ru" name="Value" nillable="true" type="q7:Variant" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q8="http://esb.axelot.ru" name="MessageProperty" nillable="true" type="q8:MessageProperty" />
+  <xs:complexType name="Variant">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BooleanValues" nillable="true" type="q9:ArrayOfboolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ByteValues" nillable="true" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DoubleValues" nillable="true" type="q10:ArrayOfdouble">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FloatValues" nillable="true" type="q11:ArrayOffloat">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IntegerValues" nillable="true" type="q12:ArrayOfint">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LongIntegerValues" nillable="true" type="q13:ArrayOflong">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="StringValues" nillable="true" type="q14:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q15="http://esb.axelot.ru" minOccurs="0" name="Type" type="q15:VariantType" />
+      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UnsignedIntegerValues" nillable="true" type="q16:ArrayOfunsignedInt">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q17="http://esb.axelot.ru" name="Variant" nillable="true" type="q17:Variant" />
+  <xs:simpleType name="VariantType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Byte" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="UnsignedInteger" />
+      <xs:enumeration value="Float" />
+      <xs:enumeration value="Double" />
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="StringArray" />
+      <xs:enumeration value="ByteArray" />
+      <xs:enumeration value="IntegerArray" />
+      <xs:enumeration value="UnsignedIntegerArray" />
+      <xs:enumeration value="FloatArray" />
+      <xs:enumeration value="DoubleArray" />
+      <xs:enumeration value="BooleanArray" />
+      <xs:enumeration value="Null" />
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="LongInteger" />
+      <xs:enumeration value="LongIntegerArray" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q18="http://esb.axelot.ru" name="VariantType" nillable="true" type="q18:VariantType" />
+  <xs:complexType name="Receivers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Receiver" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q19="http://esb.axelot.ru" name="Receivers" nillable="true" type="q19:Receivers" />
+  <xs:element name="SendMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMessageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://esb.axelot.ru" minOccurs="0" name="messages" nillable="true" type="q20:ArrayOfMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfMessage">
+    <xs:sequence>
+      <xs:element xmlns:q21="http://esb.axelot.ru" minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="q21:Message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q22="http://esb.axelot.ru" name="ArrayOfMessage" nillable="true" type="q22:ArrayOfMessage" />
+  <xs:element name="SendMessageBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMessageBatchResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://esb.axelot.ru" minOccurs="0" name="requestMessage" nillable="true" type="q23:Message" />
+        <xs:element minOccurs="0" name="timeoutSec" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://esb.axelot.ru" minOccurs="0" name="ExecuteRequestResult" nillable="true" type="q24:Message" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
